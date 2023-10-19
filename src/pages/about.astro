@@ -1,0 +1,121 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<BaseLayout title="A propos | johan le manac'h" description="A propos de johan">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="A propos"
+				tagline="Découvrez mon parcours et mes compétences."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/ecran.webp"
+					alt="écran d'ordinateur et clavier"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Je m'appelle Johan Le Manac'h, et je suis un développeur
+						web passioné par cet univer. Mon
+						parcours professionnel varié m'a permis d'acquérir des
+						compétences précieuses et une polyvalence qui
+						enrichissent mon profil de développeur. En 2023, j'ai
+						suivi une formation en développement web à l'école
+						O'Clock, où j'ai acquis des compétences solides  en html, css, javascript, wordpress, laravel, PHP
+						et Symfony. J'ai participé à un projet d'une durée d'un
+						mois axé sur le framework Symfony, ce qui m'a permis de
+						développer des applications web de manière efficace et
+						structurée..
+					</p>
+					<p>
+						Je suis également capable de m'adapter rapidement à des situations changeantes et imprévisibles.
+					</p>
+					<p>
+						Actuellement en quête d'une alternance en tant que concepteur développeur d'application, je suis ouvert à de nouvelles opportunités pour continuer à développer mes compétences et contribuer au succès de projets passionnants.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Diplome</h2>
+				<div class="content">
+					<p>Titre Professionnel Développeur Web et Web Mobile niveau 5 (équivalent à un diplôme bac+2), brevet professionnel responsable d'atelier de production horticole niveau 4, Bep maintenance des véhicules et des matériels </p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>Curieux, Créatif, Autonome,Travail en Équipe, Adaptabilité, polyvalent. </p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
