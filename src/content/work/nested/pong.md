@@ -1,7 +1,7 @@
 ---
 title: pong
 publishDate: 2024-04-07 
-img: assets/pongBackground.png
+img:   /portfolio/assets/pongBackground.png
 img_alt: menu de présentation du jeux avec le bouton jouer et le fond d'écran.
 description: |
  Ce projet est une implémentation du jeu classique Pong en utilisant le langage de programmation Python et la bibliothèque Pygame. Pong est un jeu de tennis de table en 2D où deux joueurs contrôlent des raquettes pour frapper une balle de chaque côté de l'écran.
@@ -26,5 +26,5 @@ tags:
 
 
  
-![représente le jeux pong avec les deux raquette de chaque coté de l'écran et la balle au centre et l affichage des score en haut.](/public/assets/pong.png)
+![représente le jeux pong avec les deux raquette de chaque coté de l'écran et la balle au centre et l affichage des score en haut.](/portfolio/assets/pong.png)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?style=flat&logo=github)]( https://github.com/johanlemanach/pong)
